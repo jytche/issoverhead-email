@@ -40,12 +40,12 @@ def is_nighttime():
 while True:
     time.sleep(60)
     if is_iss_overhead() is True and is_nighttime() is True:
-        my_email = "jytchengtest@gmail.com"
-        password = "wrwlnctqoelefrmw"
+        my_email = "ENTER EMAIL HERE"
+        password = "ENTER PASSWORD HERE"
 
         with smtplib.SMTP("smtp.gmail.com") as connection:
             connection.starttls()
             connection.login(user=my_email, password=password)
-            connection.sendmail(from_addr=my_email, to_addrs="jytchengtest@yahoo.com", msg=f"Subject:Look Up!\n\n"
+            connection.sendmail(from_addr=my_email, to_addrs="ENTER ADDRESSEE EMAIL HERE", msg=f"Subject:Look Up!\n\n"
                                 f"The ISS Station is right above you!")
 
